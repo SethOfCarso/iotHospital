@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "hospitalApp"
+    }
+  },
+  "defaultProject": "hospitalApp",
+  "cli": {
+    "analytics": false
+  }
 }

@@ -14,6 +14,10 @@ import { DashboardMainComponent } from './dashboard/dashboard-main/dashboard-mai
 import { DashboardDetailComponent } from './dashboard/dashboard-detail/dashboard-detail.component';
 import { LineChartComponent } from './line-chart/line-chart.component';
 
+import{HttpClientModule}from'@angular/common/http';
+import { UsuarioComponent } from './usuario/usuario.component';
+import { FormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,11 +29,14 @@ import { LineChartComponent } from './line-chart/line-chart.component';
     DashboardComponent,
     DashboardMainComponent,
     DashboardDetailComponent,
-    LineChartComponent
+    LineChartComponent,
+    UsuarioComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
     ChartsModule
   ],
   providers: [],

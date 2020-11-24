@@ -1,3 +1,5 @@
+
+
 <div class="row">
     <p> <img class="infoStatus" src="../../../assets/images/BlackCir.png" alt="Sin info"> Sin información</p>
     <p> <img class="infoStatus" src="../../../assets/images/GreenCir.png" alt="good status"> Estado normal</p>
@@ -40,6 +42,7 @@
             <h5 class="card-title">Special title treatment</h5>
             <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
             <a href="#" class="btn btn-primary">Go somewhere</a>
+
           </div>
         </div>
       </div>
@@ -70,6 +73,7 @@
             <h5 class="card-title">Special title treatment</h5>
             <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
             <a href="#" class="btn btn-primary">Go somewhere</a>
+
           </div>
         </div>
       </div>
@@ -88,3 +92,15 @@
         </div>
       </div>
   </div>
+
+  <div class="chart-wrapper">
+    <canvas baseChart 
+        [datasets]="lineChartData" 
+        [labels]="lineChartLabels" 
+        [options]="lineChartOptions"
+        [colors]="lineChartColors" 
+        [legend]="lineChartLegend" 
+        [chartType]="lineChartType" 
+        [plugins]="lineChartPlugins">
+    </canvas>
+</div>

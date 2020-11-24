@@ -1,24 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { ChartDataSets, ChartOptions } from 'chart.js';
 import { Color, Label } from 'ng2-charts';
 
 @Component({
-  selector: 'app-dashboard-main',
-  templateUrl: './dashboard-main.component.html',
-  styleUrls: ['./dashboard-main.component.scss']
+  selector: 'app-line-chart',
+  templateUrl: './line-chart.component.html',
+  styleUrls: ['./line-chart.component.scss']
 })
-export class DashboardMainComponent implements OnInit {
 
-  now:number;
+export class LineChartComponent {
 
-    constructor() {
-        setInterval(() => {
-          this.now = Date.now();
-        }, 1);
-    }
-
-  ngOnInit(): void {
-  }
   lineChartData: ChartDataSets[] = [
     { data: [85, 72, 78, 75, 77, 75], label: 'Crude oil prices' },
   ];
@@ -39,7 +30,5 @@ export class DashboardMainComponent implements OnInit {
   lineChartLegend = true;
   lineChartPlugins = [];
   lineChartType = 'line';
-
+  
 }
-
-

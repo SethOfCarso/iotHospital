@@ -1,21 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DashboardMainComponent } from './dashboard-main.component';
+import { LineChartComponent } from './line-chart.component';
 
-
-describe('DashboardMainComponent', () => {
-  let component: DashboardMainComponent;
-  let fixture: ComponentFixture<DashboardMainComponent>;
+describe('LineChartComponent', () => {
+  let component: LineChartComponent;
+  let fixture: ComponentFixture<LineChartComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ DashboardMainComponent ]
+      declarations: [ LineChartComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(DashboardMainComponent);
+    fixture = TestBed.createComponent(LineChartComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
@@ -24,6 +23,3 @@ describe('DashboardMainComponent', () => {
     expect(component).toBeTruthy();
   });
 });
-
-
-

@@ -1,3 +1,5 @@
+
+
 <div class="row">
     <p> <img class="infoStatus" src="../../../assets/images/BlackCir.png" alt="Sin info"> Sin información</p>
     <p> <img class="infoStatus" src="../../../assets/images/GreenCir.png" alt="good status"> Estado normal</p>
@@ -22,10 +24,10 @@
           <img src="../../../assets/images/Bed no info.png" alt="bed info">
           <img src="../../../assets/images/Bed good.png"alt="bed info">
           <img src="../../../assets/images/bed warning.png" alt="bed info">
-          <!-- <img src="../../../assets/images/bed bad.png" alt="bed info"> -->
+          <img src="../../../assets/images/bed bad.png" alt="bed info">
             
-            <p class="card-text"> <img src="../../../assets/images/SpO2.png" alt="Oxigenacion"> 0</p>
-            <p class="card-text"> <img src="../../../assets/images/temperature.png" alt="Temperatura"> 0</p>
+            <p class="card-text sp2ico"> <img src="../../../assets/images/SpO2.png" alt="Oxigenacion"> 0</p>
+            <p class="card-text temperatureIco"> <img src="../../../assets/images/temperature.png" alt="Temperatura"> 0</p>
           </div>
         </div>
       </div>
@@ -36,29 +38,30 @@
           <img src="../../../assets/images/Bed no info.png" alt="bed info">
           <img src="../../../assets/images/Bed good.png"alt="bed info">
           <img src="../../../assets/images/bed warning.png" alt="bed info">
-          <!-- <img src="../../../assets/images/bed bad.png" alt="bed info"> -->
-            <h5 class="card-title">Special title treatment</h5>
-            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+          <img src="../../../assets/images/bed bad.png" alt="bed info">
+            
+            <p class="card-text sp2ico"> <img src="../../../assets/images/SpO2.png" alt="Oxigenacion"> 0</p>
+            <p class="card-text temperatureIco"> <img src="../../../assets/images/temperature.png" alt="Temperatura"> 0</p>
           </div>
         </div>
       </div>
+
   </div>
 
   <div class="row">
     <div class="col-sm-4">
-      <div class="card">
-        <div class="card-body">
-        <img src="../../../assets/images/Bed no info.png" alt="bed info">
-        <img src="../../../assets/images/Bed good.png"alt="bed info">
-        <img src="../../../assets/images/bed warning.png" alt="bed info">
-        <img src="../../../assets/images/bed bad.png" alt="bed info">
-          <h5 class="card-title">Special title treatment</h5>
-          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
+        <div class="card">
+          <div class="card-body">
+          <img src="../../../assets/images/Bed no info.png" alt="bed info">
+          <img src="../../../assets/images/Bed good.png"alt="bed info">
+          <img src="../../../assets/images/bed warning.png" alt="bed info">
+          <img src="../../../assets/images/bed bad.png" alt="bed info">
+            
+            <p class="card-text sp2ico"> <img src="../../../assets/images/SpO2.png" alt="Oxigenacion"> 0</p>
+            <p class="card-text temperatureIco"> <img src="../../../assets/images/temperature.png" alt="Temperatura"> 0</p>
+          </div>
         </div>
       </div>
-    </div>
 
     <div class="col-sm-4">
         <div class="card">
@@ -67,9 +70,8 @@
           <img src="../../../assets/images/Bed good.png"alt="bed info">
           <img src="../../../assets/images/bed warning.png" alt="bed info">
           <img src="../../../assets/images/bed bad.png" alt="bed info">
-            <h5 class="card-title">Special title treatment</h5>
-            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+            <p class="card-text sp2ico"> <img src="../../../assets/images/SpO2.png" alt="Oxigenacion"> 0</p>
+            <p class="card-text temperatureIco"> <img src="../../../assets/images/temperature.png" alt="Temperatura"> 0</p>
           </div>
         </div>
       </div>
@@ -81,10 +83,22 @@
           <img src="../../../assets/images/Bed good.png"alt="bed info">
           <img src="../../../assets/images/bed warning.png" alt="bed info">
           <img src="../../../assets/images/bed bad.png" alt="bed info">
-            <h5 class="card-title">Special title treatment</h5>
-            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+            
+            <p class="card-text sp2ico"> <img src="../../../assets/images/SpO2.png" alt="Oxigenacion"> 0</p>
+            <p class="card-text temperatureIco"> <img src="../../../assets/images/temperature.png" alt="Temperatura"> 0</p>
           </div>
         </div>
       </div>
   </div>
+
+  <div class="chart-wrapper">
+    <canvas baseChart 
+        [datasets]="lineChartData" 
+        [labels]="lineChartLabels" 
+        [options]="lineChartOptions"
+        [colors]="lineChartColors" 
+        [legend]="lineChartLegend" 
+        [chartType]="lineChartType" 
+        [plugins]="lineChartPlugins">
+    </canvas>
+</div>

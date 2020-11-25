@@ -35,6 +35,9 @@ export class DashboardMainComponent implements OnInit {
         this.udpateInfo();
         this.lastUpdate = this.now;
         this.updateBedStatus();
+        if(this.bed1 == 3){
+          alert("En la cama 1 URGE atención")
+        }
       });
 
         setInterval(() => {

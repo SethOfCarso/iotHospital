@@ -1,3 +1,16 @@
+<nav class="navbar navbar-inverse navbar-light bg-bluelight">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      
+    </div>
+    
+    <div class="navbar-right ">
+      <p class="text-white userName">  Ultima actualización {{ lastUpdate | date:'HH:mm:ss EEEE, d MMMM , y'}}  </p>
+    </div>
+    
+  </div>
+</nav>
+
 
 
 <div class="row">
@@ -5,6 +18,8 @@
     <p> <img class="infoStatus" src="../../../assets/images/GreenCir.png" alt="good status"> Estado normal</p>
     <p> <img class="infoStatus" src="../../../assets/images/YellowCir.png" alt="warnign status"> Estado irregular</p>
     <p> <img class="infoStatus" src="../../../assets/images/RedCircle.png" alt="red status"> Estado critico</p>
+
+    <!-- <a name="" id="" class="btn btn-primary" role="button" (click)="udpateInfo()" >Actualizar informacion</a> -->
 </div>
 
 <div class="row">
@@ -20,25 +35,25 @@
 
     <div class="col-sm-4">
         <div class="card">
-          <div class="card-body">
-          <img src="../../../assets/images/Bed no info.png" alt="bed info">
-          <img src="../../../assets/images/Bed good.png"alt="bed info">
-          <img src="../../../assets/images/bed warning.png" alt="bed info">
-          <img src="../../../assets/images/bed bad.png" alt="bed info">
+          <div class="card-body mx-auto">
+          <img *ngIf="bed1 == 0" src="../../../assets/images/Bed no info.png" alt="bed info">
+          <img *ngIf="bed1 == 1" src="../../../assets/images/Bed good.png"alt="bed info">
+          <img *ngIf="bed1 == 2" src="../../../assets/images/bed warning.png" alt="bed info">
+          <img *ngIf="bed1 == 3" src="../../../assets/images/bed bad.png" alt="bed info">
             
-            <p class="card-text sp2ico"> <img src="../../../assets/images/SpO2.png" alt="Oxigenacion"> 0</p>
-            <p class="card-text temperatureIco"> <img src="../../../assets/images/temperature.png" alt="Temperatura"> 0</p>
+            <p class="card-text sp2ico"> <img src="../../../assets/images/SpO2.png" alt="Oxigenacion"> {{oxigenData[0].value}} </p>
+            <p class="card-text temperatureIco"> <img src="../../../assets/images/temperature.png" alt="Temperatura">  {{temperatureData[0].value}} </p>
           </div>
         </div>
       </div>
 
       <div class="col-sm-4">
         <div class="card">
-          <div class="card-body">
-          <img src="../../../assets/images/Bed no info.png" alt="bed info">
-          <img src="../../../assets/images/Bed good.png"alt="bed info">
-          <img src="../../../assets/images/bed warning.png" alt="bed info">
-          <img src="../../../assets/images/bed bad.png" alt="bed info">
+          <div class="card-body mx-auto">
+          <img *ngIf="bed2 == 0" src="../../../assets/images/Bed no info.png" alt="bed info">
+          <img *ngIf="bed2 == 1" src="../../../assets/images/Bed good.png"alt="bed info">
+          <img *ngIf="bed2 == 2" src="../../../assets/images/bed warning.png" alt="bed info">
+          <img *ngIf="bed2 == 3" src="../../../assets/images/bed bad.png" alt="bed info">
             
             <p class="card-text sp2ico"> <img src="../../../assets/images/SpO2.png" alt="Oxigenacion"> 0</p>
             <p class="card-text temperatureIco"> <img src="../../../assets/images/temperature.png" alt="Temperatura"> 0</p>
@@ -51,11 +66,11 @@
   <div class="row">
     <div class="col-sm-4">
         <div class="card">
-          <div class="card-body">
-          <img src="../../../assets/images/Bed no info.png" alt="bed info">
-          <img src="../../../assets/images/Bed good.png"alt="bed info">
-          <img src="../../../assets/images/bed warning.png" alt="bed info">
-          <img src="../../../assets/images/bed bad.png" alt="bed info">
+          <div class="card-body mx-auto">
+          <img *ngIf="bed3 == 0" src="../../../assets/images/Bed no info.png" alt="bed info">
+          <img *ngIf="bed3 == 1" src="../../../assets/images/Bed good.png"alt="bed info">
+          <img *ngIf="bed3 == 2" src="../../../assets/images/bed warning.png" alt="bed info">
+          <img *ngIf="bed3 == 3" src="../../../assets/images/bed bad.png" alt="bed info">
             
             <p class="card-text sp2ico"> <img src="../../../assets/images/SpO2.png" alt="Oxigenacion"> 0</p>
             <p class="card-text temperatureIco"> <img src="../../../assets/images/temperature.png" alt="Temperatura"> 0</p>
@@ -65,11 +80,11 @@
 
     <div class="col-sm-4">
         <div class="card">
-          <div class="card-body">
-          <img src="../../../assets/images/Bed no info.png" alt="bed info">
-          <img src="../../../assets/images/Bed good.png"alt="bed info">
-          <img src="../../../assets/images/bed warning.png" alt="bed info">
-          <img src="../../../assets/images/bed bad.png" alt="bed info">
+          <div class="card-body mx-auto">
+          <img *ngIf="bed4 == 0" src="../../../assets/images/Bed no info.png" alt="bed info">
+          <img *ngIf="bed4 == 1" src="../../../assets/images/Bed good.png"alt="bed info">
+          <img *ngIf="bed4 == 2" src="../../../assets/images/bed warning.png" alt="bed info">
+          <img *ngIf="bed4 == 3" src="../../../assets/images/bed bad.png" alt="bed info">
             <p class="card-text sp2ico"> <img src="../../../assets/images/SpO2.png" alt="Oxigenacion"> 0</p>
             <p class="card-text temperatureIco"> <img src="../../../assets/images/temperature.png" alt="Temperatura"> 0</p>
           </div>
@@ -78,11 +93,11 @@
 
       <div class="col-sm-4">
         <div class="card">
-          <div class="card-body">
-          <img src="../../../assets/images/Bed no info.png" alt="bed info">
-          <img src="../../../assets/images/Bed good.png"alt="bed info">
-          <img src="../../../assets/images/bed warning.png" alt="bed info">
-          <img src="../../../assets/images/bed bad.png" alt="bed info">
+          <div class="card-body mx-auto">
+          <img *ngIf="bed5 == 0" src="../../../assets/images/Bed no info.png" alt="bed info">
+          <img *ngIf="bed5 == 1" src="../../../assets/images/Bed good.png"alt="bed info">
+          <img *ngIf="bed5 == 2" src="../../../assets/images/bed warning.png" alt="bed info">
+          <img *ngIf="bed5 == 3" src="../../../assets/images/bed bad.png" alt="bed info">
             
             <p class="card-text sp2ico"> <img src="../../../assets/images/SpO2.png" alt="Oxigenacion"> 0</p>
             <p class="card-text temperatureIco"> <img src="../../../assets/images/temperature.png" alt="Temperatura"> 0</p>

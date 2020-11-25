@@ -3,7 +3,6 @@ import { Router } from '@angular/router';
 import { UsuarioService } from '../usuario.service';
 import { FormsModule } from '@angular/forms';
 import { NgForm } from '@angular/forms';
-import { log } from 'util';
 
 @Component({
   selector: 'app-login',
@@ -39,9 +38,11 @@ export class LoginComponent implements OnInit {
       if(data != undefined)
       {
         this.loginServer = data;
-        
+        this.checkCredentials();
       }
-      this.checkCredentials();
+      else{
+        console.log("Error");
+      }
       // this.loginFalse();
     })
 
@@ -52,15 +53,23 @@ export class LoginComponent implements OnInit {
   }
 
   checkCredentials(){
+    // console.log(this.usuario);
+    // console.log(this.loginServer);
+
     if(this.usuario.username == this.loginServer.username){
       if(this.usuario.password == this.loginServer.password){
         this.loginTrue();
-      }
+        }else{
+        this.loginFalse();
+        }
+    } else {
+      this.loginFalse();
     }
-    
   }
 
   loginTrue(){
+    console.log(this.loginServer.nombre);
+    localStorage.setItem("nombre" , this.loginServer.nombre);
     this.router.navigate(['/home/']);
   }
 

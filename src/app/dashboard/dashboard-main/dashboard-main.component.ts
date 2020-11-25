@@ -9,9 +9,14 @@ import { Color, Label } from 'ng2-charts';
 })
 export class DashboardMainComponent implements OnInit {
 
+  
+
   now:number;
 
     constructor() {
+
+      
+
         setInterval(() => {
           this.now = Date.now();
         }, 1);

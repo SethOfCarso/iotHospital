@@ -1,5 +1,8 @@
 # HospitalApp (Student's app)
 
+## Visualización
+Aqui se ve como se hizo el prototipo de la parte de diseño https://xd.adobe.com/view/4ae52752-e464-4845-6feb-239ace4d20c3-3cd4/
+
 ##Front-end
 
 **This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.0.**
